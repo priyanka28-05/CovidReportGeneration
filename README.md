@@ -42,17 +42,15 @@ You must have the following installed:
 
 1.  Create a database schema (e.g., `covid_db`).
 2.  Run the necessary SQL script to create the **user table** for the login module:
+CREATE DATABASE users
 
-    ```sql
-    -- Example structure for the users table
-    CREATE TABLE users (
-        id INT PRIMARY KEY AUTO_INCREMENT,
-        username VARCHAR(50) NOT NULL UNIQUE,
-        password VARCHAR(255) NOT NULL,
-        role VARCHAR(50)
-    );
-    -- Insert a default admin user (Note: Use hashed passwords in production!)
-    INSERT INTO users (username, password, role) VALUES ('admin', 'adminpass', 'ADMIN');
+CREATE TABLE `login` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) 
+
+INSERT INTO `users`.`login` (`username`, `password`) VALUES ("admin", "admin");
     ```
 
 3.  Ensure your **database connection parameters** (URL, username, password) are correctly set within the Java Servlets or configuration files.
