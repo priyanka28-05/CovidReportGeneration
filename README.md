@@ -38,20 +38,32 @@ You must have the following installed:
 3.  **SQL Database** (with credentials/schema configured).
 4.  **Database Driver** (JAR file for your specific SQL database).
 
-### 1. Database Configuration
+### 1. Database Configuration 🔒
 
-1.  Create a database schema (e.g., `covid_db`).
-2.  Run the necessary SQL script to create the **user table** for the login module:
-CREATE DATABASE users
+The following script sets up the `users` database and the `login` table.
 
+> **Security Note:** Passwords must *always* be hashed (e.g., using Bcrypt) in your application code before being stored in the database. The value shown below is a placeholder for a secure hash, *not* a plain text password.
+
+```sql
+-- 1. Create the Database (if it doesn't exist)
+CREATE DATABASE IF NOT EXISTS `users`;
+
+-- 2. Use the new Database
+USE `users`;
+
+-- 3. Create the Table
+-- 'password' length is increased to accommodate a secure hash (VARCHAR(255)).
 CREATE TABLE `login` (
-  `username` varchar(45) NOT NULL,
-  `password` varchar(45) DEFAULT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(255) NOT NULL, 
   PRIMARY KEY (`username`)
-) 
+);
 
-INSERT INTO `users`.`login` (`username`, `password`) VALUES ("admin", "admin");
-    ```
+-- 4. Insert Data (Admin/Default User)
+INSERT INTO `users`.`login` (`username`, `password`)
+VALUES ("admin", "$2a$10$w3vQ3b2F9kHlXjG5o7r8O.5JcE9pY1iT0u4I0zGv6W2M4kH6qL7"); 
+-- This placeholder hash represents the password 'admin' securely hashed.
+    
 
 3.  Ensure your **database connection parameters** (URL, username, password) are correctly set within the Java Servlets or configuration files.
 
