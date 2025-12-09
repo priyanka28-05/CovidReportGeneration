@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf0ec188-0ba2-4d6f-91a7-7735c1a164c3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="image" class="java.lang.String"/>
+	<parameter name="qrCode" class="java.lang.String"/>
+	<parameter name="sampleUidBarcode" class="java.lang.String"/>
+	<parameter name="footer" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="age" class="java.lang.String"/>
+	<parameter name="gender" class="java.lang.String"/>
+	<parameter name="aadharNo" class="java.lang.String"/>
+	<parameter name="passportNo" class="java.lang.String"/>
+	<parameter name="patientLoc" class="java.lang.String"/>
+	<parameter name="patientNo" class="java.lang.String"/>
+	<parameter name="contactNo" class="java.lang.String"/>
+	<parameter name="doctorName" class="java.lang.String"/>
+	<parameter name="centre" class="java.lang.String"/>
+	<parameter name="collectionTime" class="java.lang.String"/>
+	<parameter name="acceptenceTime" class="java.lang.String"/>
+	<parameter name="reportedOn" class="java.lang.String"/>
+	<parameter name="sampleUID" class="java.lang.String"/>
+	<parameter name="org" class="java.lang.String"/>
+	<parameter name="testResult" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="0" y="0" width="550" height="61" uuid="47d6be7d-f0d2-4f54-a1af-2223b65b51e2"/>
+				<imageExpression><![CDATA[$P{image}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="213">
+			<staticText>
+				<reportElement x="6" y="7" width="100" height="19" uuid="a8e41b98-4943-4a46-aa33-81b8c8304138"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Patient Name            :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="26" width="100" height="19" uuid="4773a56a-9014-49c1-b71d-a3dbca8f6a6e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Age and Gender	     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="45" width="100" height="19" uuid="ddf50f27-d2c9-4bf3-b080-b8b3349b72fd"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Passport No.	     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="64" width="100" height="19" uuid="9bdafe63-cd44-4567-a91a-05298184456e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Patient Location	     :  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="84" width="100" height="19" uuid="51b591c8-63d7-429e-86ea-7ee0759f7990"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Patient Contact No.   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="103" width="100" height="19" uuid="1d59e714-b59d-4fc7-9267-1ac96772f2fd"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Referring Doctor	     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="122" width="100" height="19" uuid="5d01298c-e5d1-4429-8d70-d69d96b71028"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Centre		     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="7" width="116" height="19" uuid="4b974cfa-b5f0-4e22-8c9d-11f9612f3236"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Sample Collection Time :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="26" width="115" height="19" uuid="c0e5fdfa-24ab-44e4-8ace-4c809b5d7d5e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Sample Accepted On     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="45" width="115" height="19" uuid="678e4565-0c4a-40ea-8fc7-ed2a82f5ab3c"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Reported On	          :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="98" width="115" height="19" uuid="c51fa5ac-d506-4036-b870-792f8a3d2e6e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Organization                  :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="141" width="550" height="1" uuid="530f6824-3c91-432e-b392-c574d2fc3d05">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="162" width="550" height="1" uuid="1e99e60f-8eb0-457c-b920-3814e6215a53">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="180" width="550" height="1" uuid="c0f368e4-7f03-4a4b-b811-80542a9381cf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="130" y="143" width="270" height="19" uuid="0902ba8e-4ae8-4890-9e68-8ba6500279e0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[SARS CoV -2 REAL TIME PCR ( COVID-19 )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="165" width="100" height="14" uuid="684a34b9-3f0f-4688-923e-52c0290f616b"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Test Done]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="165" width="100" height="14" uuid="40703ab8-6de2-484f-8175-b2ff15c579b5"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Observed Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="197" width="221" height="16" uuid="7cb1112d-6a0b-4431-86c2-404cc6243dc9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[SARS CoV -2 REAL TIME PCR ( COVID-19 )]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="6" width="175" height="20" uuid="255605c6-b2dc-4f91-abcd-a35c48b75433"/>
+				<textFieldExpression><![CDATA[$P{name} !=null ? $P{name} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="26" width="34" height="19" uuid="b7d6a82b-c899-4c45-ae0d-b04dbab411d0"/>
+				<textFieldExpression><![CDATA[$P{age} !=null ? $P{age} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="64" width="175" height="19" uuid="a4fb0288-bd29-4485-9d79-7d852fc60e1d"/>
+				<textFieldExpression><![CDATA[$P{patientLoc} !=null ? $P{patientLoc} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="44" width="175" height="20" uuid="993cf535-9167-44b3-8525-5ee2de130818"/>
+				<textFieldExpression><![CDATA[$P{passportNo} !=null ? $P{passportNo} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="84" width="175" height="19" uuid="b3779ba7-61fa-4803-bfe7-de653e594528"/>
+				<textFieldExpression><![CDATA[$P{contactNo} !=null ? $P{contactNo} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="102" width="175" height="20" uuid="f0a05b4a-b09d-4a7a-b6e6-8f39b0832611"/>
+				<textFieldExpression><![CDATA[$P{doctorName} !=null ? $P{doctorName} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="122" width="175" height="19" uuid="a3c5ed40-b7b6-45c6-adf8-93932dc15f0a"/>
+				<textFieldExpression><![CDATA[$P{centre} !=null ? $P{centre} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="26" width="34" height="19" uuid="3f291661-83ac-4469-81aa-d6284a930021"/>
+				<textFieldExpression><![CDATA[$P{gender} !=null ?$P{gender} : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="122" y="26" width="53" height="19" uuid="9b18d2bd-f48b-4296-ac69-d8999fd92738"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[/ Years /]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="6" width="125" height="20" uuid="abb7ba6d-62e8-42e1-9c45-9a452faa1e07"/>
+				<textFieldExpression><![CDATA[$P{collectionTime} !=null ? $P{collectionTime} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="44" width="125" height="20" uuid="3dda907f-4afb-4d11-92f3-99f16c5d2b47"/>
+				<textFieldExpression><![CDATA[$P{reportedOn} !=null ? $P{reportedOn} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="99" width="125" height="19" uuid="3586e60b-ac9e-4ff9-a638-eab195d00d7b"/>
+				<textFieldExpression><![CDATA[$P{org} !=null ? $P{org} : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="25" width="125" height="19" uuid="82266635-e608-47bc-95a0-fdb7e76e8bd8"/>
+				<textFieldExpression><![CDATA[$P{acceptenceTime} !=null ? $P{acceptenceTime} : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="418" y="64" width="157" height="19" uuid="2e9d821c-9a19-4c18-91ea-3fc0237d40ea"/>
+				<imageExpression><![CDATA[$P{sampleUidBarcode}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="429" y="84" width="125" height="18" uuid="a1a29f18-729f-46a3-bcf7-3d8f71621bff"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{sampleUID} !=null ? $P{sampleUID} : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="65" width="115" height="19" uuid="e6c8edfd-2298-4008-9bec-e1fe074d69d7"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Sample UID No	          :  ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="428" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="8" width="93" height="12" uuid="0ff656af-1af2-4d65-8dee-993b11f3f9f7"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[SPECIMEN 				
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="26" width="93" height="12" uuid="5c89dbb9-7490-4c5e-b420-81e071d1c599"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[SARS-CoV-2 RNA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="47" width="93" height="12" uuid="d4b7bf93-33af-4001-a40d-8a8594e7d9ba"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Method]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="47" width="93" height="12" uuid="e6895584-0c6b-41d6-a1c9-061f12781db4"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Real Time RTPCR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="63" width="100" height="19" uuid="5309dd2a-938f-4682-990e-3bd497b06efe"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Note :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="75" width="292" height="25" uuid="94e81616-7679-440d-89ef-a33511d902c6"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Kit Specification - Qiagen Covid-19 One Step RT-PCR kit.
+Interpretation(s)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="98" width="536" height="122" uuid="3146db90-5675-4d3c-a0f4-2b645bd1e58f"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[SARS CoV -2 REAL TIME PCR-
+SARS-CoV-2, formerly known as 2019-nCoV, is the causative agent of the coronavirus disease 2019 (COVID-19). Main symptoms of the disease include fever, cough and shortness of breath. The virus is spread via person-to-person contact through respiratory droplets produced when a person coughs or sneezes. The SARS-CoV-2 RNA is generally detectable in nasopharyngeal/oropharyngeal swabs during the acute phase of infection. Positive results are indicative of active infection. Real Time PCR assay targets specific genes and can be used for diagnosis of SARS-CoV-2 virus infection which contributes to severe upper respiratory distress and complications.
+Positive result indicates that RNA from SARS-CoV-2 was detected in the specimen, and the patient is considered infected with the virus and presumed to be contagious. Negative test result for this test means that SARS-CoV-2 RNA was not detected in the specimen above the limit of detection of the assay.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="225" width="292" height="15" uuid="f40ec6df-2b19-4cb0-a812-8dd7a50bc003"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Limitations :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="238" width="536" height="190" uuid="3a820f73-2538-4cc8-9408-3d08c6b82088"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[• Negative results do not preclude COVID-19 and should not be used as the sole basis for patient management decisions. Negative results must be combined with clinical observations, patient history, and epidemiological information.
+
+• Positive results do not rule out bacterial infection or co-infection with other viruses.
+
+• Optimum specimen types and timing for peak viral levels during infections caused by 2019-nCoV have not been determined. Collection of multiple specimens (types and time points) from the same patient may be necessary to detect the virus.
+
+• Follow-up testing may particularly be important if patient has a clinical picture of viral pneumonia, a potential exposure history, and/or radiographic findings (chest CT or MRI scan) consistent with COVID -19 pneumonia. However repeat testing in the near-term after clearance (within 90 days) should be avoided as prolonged shedding of non-viable virus is not uncommon.
+
+• Ct values generated from different assay systems within the same laboratory, or from different laboratories, are not directly comparable and do not necessarily reflect the same viral load due to inter-assay and inter-laboratory variability.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="212" y="27" width="125" height="20" uuid="31ebbe96-8e18-4c60-8f06-295421221b21"/>
+				<textElement>
+					<font fontName="Arial" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{testResult} !=null ? $P{testResult} : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="212" y="8" width="248" height="12" uuid="e53f3b47-5ff6-4e19-bda6-2a79c0ccd55a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[NASOPHARYNGEAL / OROPHARYNGEAL SWAB * ]]></text>
+			</staticText>
+		</band>
+		<band height="428">
+			<staticText>
+				<reportElement x="14" y="3" width="536" height="87" uuid="79d79be0-5962-4505-bfa4-76b50aa7fc04"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[• Variation in timing of sample collection, fluctuations in virus shedding, and difference between detection limit of different testing methods within same or different labs could lead to variation in results particularly during initial phase of infection.
+
+• If the virus mutates in the RT-PCR target region, 2019-nCoV may not be detected or may be detected less predictably. Inhibitors or other types of interference may produce a false negative result.
+
+• The performance of this test has not been established for monitoring treatment of 2019-nCoV infection.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="92" width="100" height="19" uuid="f91ca008-47fb-40ec-a29b-ae91d8423943"/>
+				<textElement>
+					<font fontName="Arial" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Note :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="104" width="292" height="16" uuid="a9178528-a8e3-4fdc-a59c-44178131802f"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Test is performed using ICMR approved Kit.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="115" width="100" height="15" uuid="5e8b83c8-e1eb-496e-a22b-8777526060e8"/>
+				<textElement>
+					<font fontName="Arial" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[References :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="132" width="536" height="87" uuid="ef9c529e-b3bf-453f-8447-f4722681092d"/>
+				<textElement>
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[1. Laboratory testing for coronavirus disease 2019 (COVID-19) in suspected human cases. Interim guidance. World Health Organization.
+
+2. Druce et al. JCM. 2011
+
+3. N. Engl. J. Med. 2020, 382, 929–936
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="216" width="167" height="34" uuid="35f73d00-897b-4281-bb20-bd63d439476a"/>
+				<textElement>
+					<font fontName="Arial" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ICMR Registration no - MEDCMMH NABL Certificate no - MC-4413]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="269" width="406" height="21" uuid="c06de614-12b5-4eaa-99b5-feb151fb362f"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[SAMPLE PROCESSED AT - MEDILAB DIAGNOSTIC CENTER SEWREE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="297" width="292" height="16" uuid="c077cb63-7c80-44cc-8084-34e778b5a87b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[~~~ END OF REPORT ~~~]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="98" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="181" y="85" width="100" height="13" uuid="9e4e669d-bfc7-49bc-a74c-1de9ec3fe48f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="281" y="85" width="100" height="13" uuid="1d06d593-f45e-4f6d-8808-a55c8b387eaf"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center">
+				<reportElement x="0" y="0" width="560" height="80" uuid="44ab3cce-ef70-486b-85f6-f6b424b257c9"/>
+				<imageExpression><![CDATA[$P{footer}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="14" y="1" width="66" height="55" uuid="8f61a3a4-ec08-4d3f-8c59-8f88423cc884"/>
+				<imageExpression><![CDATA[$P{qrCode}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
